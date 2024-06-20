@@ -60,37 +60,37 @@
     <menu class="roadmap__steps">
       <li>
         <a href="">
-          <h3>Faire une grande loi pour le pouvoir d'achat <span class="arrow"></span></h3>
+          <h3>Faire une grande loi pour le pouvoir d'achat<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
         <a href="">
-          <h3>Faire une grande loi pour la santé <span class="arrow"></span></h3>
+          <h3>Faire une grande loi pour la santé<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
         <a href="">
-          <h3>Faire une grande loi éducation <span class="arrow"></span></h3>
+          <h3>Faire une grande loi éducation<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
         <a href="">
-          <h3>Entamer la planification écologique <span class="arrow"></span></h3>
+          <h3>Entamer la planification écologique<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
         <a href="">
-          <h3>Lutter contre toutes les formes de racismes, contre l'antisémitisme et l'islamophobie <span class="arrow"></span></h3>
+          <h3>Lutter contre toutes les formes de racismes, contre l'antisémitisme et l'islamophobie<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
         <a href="">
-          <h3>Abolir les privilèges des millairdaires <span class="arrow"></span></h3>
+          <h3>Abolir les privilèges des millairdaires<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
@@ -241,6 +241,8 @@
     & a {
       position: relative;
       text-decoration: none;
+      display: inline-block;
+      width: 100%;
 
       &:hover,
       &:focus-visible {
@@ -253,10 +255,11 @@
     & h3 {
       position: relative;
       font-weight: var(--fw--bold);
-      height: 5rem;
+      padding-block: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 5rem;
       padding-inline: 6.5rem 2rem;
       transition: padding 0.3s;
 
@@ -267,7 +270,7 @@
         top: 0;
         left: 0;
         width: 5rem;
-        height: 5rem;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -276,6 +279,7 @@
     }
 
     & .arrow {
+      flex-shrink: 0;
       display: inline-block;
       width: 1.5rem;
       height: 2px;
