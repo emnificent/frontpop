@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Hero from '$lib/components/Hero.svelte';
+  import Search from '$lib/components/Search.svelte';
+  import Discord from '$lib/components/Discord.svelte';
+</script>
+
+<main class="main">
+  <Hero />
+
+  <Search />
+
+  <Discord />
+</main>
+
+<style lang="scss">
+</style>

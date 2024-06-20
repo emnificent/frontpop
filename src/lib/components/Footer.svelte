@@ -1,0 +1,104 @@
+<script>
+  import logo from '$lib/images/frontpop_white_logo.png';
+</script>
+
+<footer class="footer">
+  <nav class="footer__nav">
+    <a href="/"><img src="{logo}" alt="logo du nouveau front populaire" class="footer__nav-home"></a>
+
+    <menu class="footer__links">
+      <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+      <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i></a></li>
+      <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+    </menu>
+    
+    <a href="/legal" class="footer__legal">Mentions légales</a>
+  </nav>
+</footer>
+
+<style lang="scss">
+  .footer {
+    background-color: var(--c-text);
+    /* margin-top + global to put footer where it belongs */
+    margin-top: auto;
+  }
+
+  :global(body) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--bp-desktop--large);
+    margin: auto;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+
+    & > * {
+      margin-inline: auto;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer__nav-home {
+    height: var(--fs-title--large);
+    padding-block: 1.5rem;
+  }
+
+  .footer__links {
+    display: flex;
+    gap: 1.5rem;
+    
+    & li {
+      background-color: var(--c-background);
+      border-radius: 50%;
+      width: 2rem;
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+      
+      & a {
+        color: var(--c-text);
+        transition: color 0.3s;
+      }
+
+      &:hover,
+      &:focus-within {
+        background-color: var(--c-text);
+
+        & a {
+          color: var(--c-background);
+        }
+      }
+    }
+  }
+
+  .footer__legal {
+    color: var(--c-background);
+    text-decoration: underline solid transparent 2px;
+    transition: text-decoration-color 0.3s;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: var(--c-background);
+    }
+  }
+</style>
