@@ -59,38 +59,38 @@
 
     <menu class="roadmap__steps">
       <li>
-        <a href="">
+        <a href="/step">
           <h3>Faire une grande loi pour le pouvoir d'achat<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/step">
           <h3>Faire une grande loi pour la santé<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/step">
           <h3>Faire une grande loi éducation<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/step">
           <h3>Entamer la planification écologique<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/step">
           <h3>Lutter contre toutes les formes de racismes, contre l'antisémitisme et l'islamophobie<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
       <li>
-        <a href="">
-          <h3>Abolir les privilèges des millairdaires<span class="arrow"></span></h3>
+        <a href="/step">
+          <h3>Abolir les privilèges des milliardaires<span class="arrow"></span></h3>
           <span class="roadmap__steps-background"></span>
         </a>
       </li>
@@ -311,7 +311,7 @@
       height: 100%;
       left: 0;
       top: 0;
-      opacity: 0.2;
+      opacity: 0.1;
       z-index: -1;
     }
 

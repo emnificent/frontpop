@@ -36,7 +36,7 @@
 
     &:hover,
     &:focus-visible {
-      box-shadow: var(--c-text) 0 4px 8px;
+      box-shadow: var(--c-text) 0 4px 8px -2px;
     }   
   }
 </style>
