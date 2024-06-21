@@ -8,7 +8,6 @@
 	--c-yellow: #ffed00;
 	--c-purple: #941a80;
 	--c-pink: #e50053;
-	--c-blue: #0012ff;
 	--c-blue: #02b9f2;
 	--c-background: #ffffff;
 	--c-text: #181818;
@@ -46,6 +45,7 @@ h1, h2, h3 {
 	font-family: 'Barlow Condensed', sans-serif;
 	font-weight: var(--fw--bolder);
 	font-size: var(--fs-title);
+	text-transform: uppercase;
 }
 
 .screenreaders-only {

@@ -1,9 +1,7 @@
 <script>
-	import { onMount } from 'svelte';
-  import { page } from '$app/stores';
-
-  let tab = 'tab1';
+	let tab = 'tab1';
   function tabSelect(event) {
+    event.preventDefault();
     tab = event.currentTarget.attributes.href.value.replace('#', '');
     const tabSelectors = Array.from(document.getElementsByClassName('roadmap__tab'));
     tabSelectors.forEach(tabSelector => tabSelector.classList.remove('active'));
@@ -12,40 +10,34 @@
     roadmapTitle.classList.remove('tab1', 'tab2', 'tab3');
     roadmapTitle.classList.add(tab);
   }
-
-  onMount(() => {
-    tab = $page.url.hash.replace('#', '') || 'tab1';
-    document.getElementById(`selector-${tab}`).classList.add('active');
-    document.getElementById('roadmap-title').classList.add(tab);
-  });
 </script>
 
 <div class="roadmap">
   <nav class="roadmap__nav">
     <menu class="roadmap__tabs-container">
-      <li class="roadmap__tab tab1" id="selector-tab1">
-        <a href="#tab1" on:click={tabSelect}>
+      <li class="roadmap__tab tab1 active" id="selector-tab1">
+        <a href="#tab1" on:click={tabSelect} onclick="tabSelect()">
           <div>
             <p>15 premiers jours</p>
-            <p class="roadmap__tab-title">LA RUPTURE</p>
+            <p class="roadmap__tab-title">La rupture</p>
           </div>
         </a>
         <span></span>
       </li>
       <li class="roadmap__tab tab2" id="selector-tab2">
-        <a href="#tab2" on:click={tabSelect}>
+        <a href="#tab2" on:click={tabSelect} onclick="tabSelect()">
           <div>
             <p>100 premiers jours</p>
-            <p class="roadmap__tab-title">L'ÉTÉ DES BIFURCATIONS</p>
+            <p class="roadmap__tab-title">L'été des bifurcations</p>
           </div>
         </a>
         <span></span>
       </li>
       <li class="roadmap__tab tab3" id="selector-tab3">
-        <a href="#tab3" on:click={tabSelect}>
+        <a href="#tab3" on:click={tabSelect} onclick="tabSelect()">
           <div>
             <p>Les mois suivants</p>
-            <p class="roadmap__tab-title">LES TRANSFORMATIONS</p>
+            <p class="roadmap__tab-title">Les transformations</p>
           </div>
         </a>
         <span></span>
@@ -54,7 +46,7 @@
   </nav>
 
   <section class="roadmap__content">
-    <h2 class="roadmap__title" id="roadmap-title">L'ÉTÉ DES BIFURCATIONS</h2>
+    <h2 class="roadmap__title" id="roadmap-title">L'été des bifurcations</h2>
     <p class="roadmap__introduction">Passés les 15 premiers jours, une session extraordinaire s'ouvrira à l'Assemblée nationale, où les groupes du Nouveau Front Populaire sont majoritaires, puis une seconde à la rentrée, après la fin des Jeux Olympiques et Paralympiques. Le Parlement tient une place beaucoup plus importante dans le type de gouvernement promu par le Nouveau Front Populaire. Les députés sont particulièrement associés et / ou à l'initiative de 5 paquets législatifs pour amorcer les grandes bifurcations dont le pays a besoin. D'abord, à la suite des mesures d'urgence par décret, la présentation d'une grande loi permet de rattraper et d'améliorer la situation sociale des Français grandement paupérisés par 7 ans de macronisme et 3 ans d'inflation. Deux grandes lois permettront d'entamer la reconstruction des deux services publics les plus cruciaux : santé et éducation. Une loi énergie climat permettra de jeter les bases de la planification écologique. Enfin, le premier projet de loi de finances rectificative sera présenté pour abolir les privilèges des milliardaires.</p>
 
     <menu class="roadmap__steps">
@@ -98,6 +90,7 @@
   </section>
 </div>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .roadmap {
     max-width: var(--bp-desktop--large);
@@ -205,6 +198,7 @@
   .roadmap__tab-title {
     font-family: 'Barlow Condensed', 'sans-serif';
     font-size: var(--fs-title);
+    text-transform: uppercase;
   }
 
   .roadmap__content {
@@ -261,6 +255,7 @@
       justify-content: space-between;
       gap: 5rem;
       padding-inline: 6.5rem 2rem;
+      text-transform: initial;
       transition: padding 0.3s;
 
       counter-increment: steps;

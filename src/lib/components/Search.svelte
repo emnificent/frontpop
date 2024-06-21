@@ -2,7 +2,7 @@
 
 <section class="search">
   <div class="search__container">
-    <h2 class="search__title">JE VEUX CONNAÎTRE LE PROGRAMME DU FRONT POPULAIRE SUR...</h2>
+    <h2 class="search__title">Je veux connaître le programme du front populaire sur...</h2>
   
     <div class="search__shortcuts">
       <button>Pouvoir d'achat</button>
@@ -18,6 +18,7 @@
   </div>
 </section>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .colorful-separator {
     height: 2rem;
@@ -65,6 +66,9 @@
       width: fit-content;
       font-size: var(--fs-text--small);
       transition: background-color 0.3s, color 0.3s;
+      &::first-letter {
+        text-transform: capitalize;
+      }
 
       &:hover,
       &:focus-visible {

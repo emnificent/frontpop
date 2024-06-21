@@ -10,21 +10,22 @@
   }
 </script>
 
+<!-- ignore les deux commentaires ci-dessous -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<dialog class="dialog" id="step-modal" on:click={closeModalOnBackdropClick}>
-  <form class="dialog__content" method="dialog">
+<dialog class="step-dialog" id="step-modal" on:click={closeModalOnBackdropClick} onclick="closeModalOnBackdropClick()">
+  <form class="step-dialog__content" method="dialog">
     <div>
-      <h2 class="dialog__subtitle">L'ÉTÉ DES BIFURCATIONS</h2>
-      <h1 class="dialog__title">Faire une grande loi pour le pouvoir d'achat</h1>
+      <h2 class="step-dialog__subtitle">L'été des bifurcations</h2>
+      <h1 class="step-dialog__title">Faire une grande loi pour le pouvoir d'achat</h1>
     </div>
 
     <div>
-      <div class="dialog__text">
+      <div class="step-dialog__text">
         <p>Abolir la taxe Macron de 10% sur les factures d'énergie, annuler la hausse programmée du prix du gaz au 1er juillet, plafonner les frais bancaires, faire la gratuité des premiers KwH, abolir les coupures d'électricité, de chaleur et de gaz (hors trêve hivernale), annuler les réformes Macron sur le revenu de solidarité active (RSA)</p>
       </div>
     
-      <div class="dialog__share">
+      <div class="step-dialog__share">
         <p>Partager :</p>
         <a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -33,13 +34,14 @@
     </div>
   
   
-    <button class="dialog__close-button"></button>
+    <button class="step-dialog__close-button"></button>
   </form>
-  <span class="dialog__background"></span>
+  <span class="step-dialog__background"></span>
 </dialog>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
-  .dialog {
+  .step-dialog {
     max-width: var(--bp-desktop);
     border: none;
     position: fixed;
@@ -54,7 +56,7 @@
     }
   }
 
-  .dialog__content {
+  .step-dialog__content {
     position: relative;
     z-index: 99999;
     display: flex;
@@ -62,7 +64,7 @@
     gap: 1.5rem;
   }
 
-  .dialog__background {
+  .step-dialog__background {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,16 +75,17 @@
     z-index: 999;
   }
 
-  .dialog__title {
+  .step-dialog__title {
     color: var(--c-red);
+    text-transform: initial;
   }
 
-  .dialog__subtitle {
+  .step-dialog__subtitle {
     font-size: var(--fs-text);
-    color: var(--c-green)
+    color: var(--c-green);
   }
 
-  .dialog__text {
+  .step-dialog__text {
     padding-block: 1.5rem;
     padding-inline: 2.5rem 2rem;
     position: relative;
@@ -108,7 +111,7 @@
     }
   }
 
-  .dialog__share {
+  .step-dialog__share {
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -131,7 +134,7 @@
     }
   }
 
-  .dialog__close-button {
+  .step-dialog__close-button {
     position: absolute;
     width: 2rem;
     height: 2rem;

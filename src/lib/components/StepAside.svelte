@@ -1,36 +1,37 @@
-<aside class="aside-menu">
-  <h2 class="aside-menu__title">Découvrez d'autres mesures</h2>
+<aside class="step-aside-menu">
+  <h2 class="step-aside-menu__title">Découvrez d'autres mesures</h2>
 
-  <menu class="roadmap__steps aside-menu__links">
+  <menu class="step-aside-menu__links">
     <li>
       <a href="/step">
         <h3>Faire une grande loi pour la santé<span class="arrow"></span></h3>
-        <span class="roadmap__steps-background aside-menu__links-background"></span>
+        <span class="step-aside-menu__links-background"></span>
       </a>
     </li>
     <li>
       <a href="/step">
         <h3>Faire une grande loi éducation<span class="arrow"></span></h3>
-        <span class="roadmap__steps-background aside-menu__links-background"></span>
+        <span class="step-aside-menu__links-background"></span>
       </a>
     </li>
     <li>
       <a href="/step">
         <h3>Entamer la planification écologique<span class="arrow"></span></h3>
-        <span class="roadmap__steps-background aside-menu__links-background"></span>
+        <span class="step-aside-menu__links-background"></span>
       </a>
     </li>
     <li>
       <a href="/step">
         <h3>Lutter contre toutes les formes de racismes, contre l'antisémitisme et l'islamophobie<span class="arrow"></span></h3>
-        <span class="roadmap__steps-background aside-menu__links-background"></span>
+        <span class="step-aside-menu__links-background"></span>
       </a>
     </li>
   </menu>
 </aside>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
-  .aside-menu {
+  .step-aside-menu {
     border: 2px solid var(--c-green);
     border-radius: 2rem;
     padding: 3rem;
@@ -41,14 +42,18 @@
     gap: 3rem;
     position: sticky;
     top: 3rem;
+
+    & h2, h3 {
+      text-transform: initial;
+    }
   }
 
-  .aside-menu__title {
+  .step-aside-menu__title {
     font-weight: var(--fw--bold);
     color: var(--c-green);
   }
 
-  .aside-menu__links {
+  .step-aside-menu__links {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -122,7 +127,7 @@
       }
     }
 
-    & .aside-menu__links-background {
+    & .step-aside-menu__links-background {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -143,7 +148,7 @@
         & .arrow,
         & .arrow::before,
         & .arrow::after,
-        & .roadmap__steps-background {
+        & .step-aside-menu__links-background {
           background-color: var(--c-red);
         }
       }
@@ -157,7 +162,7 @@
         & .arrow,
         & .arrow::before,
         & .arrow::after,
-        & .roadmap__steps-background {
+        & .step-aside-menu__links-background {
           background-color: var(--c-green);
         }
       }
@@ -171,7 +176,7 @@
         & .arrow,
         & .arrow::before,
         & .arrow::after,
-        & .roadmap__steps-background {
+        & .step-aside-menu__links-background {
           background-color: var(--c-blue);
         }
       }
@@ -185,7 +190,7 @@
         & .arrow,
         & .arrow::before,
         & .arrow::after,
-        & .roadmap__steps-background {
+        & .step-aside-menu__links-background {
           background-color: var(--c-purple);
         }
       }

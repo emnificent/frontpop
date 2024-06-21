@@ -1,6 +1,8 @@
 <script>
+  // ignore cette ligne
   import StepDialog from './StepDialog.svelte';
 
+  // prends le code ci-dessous
   function showModalKeyboard(event) {
     if (![' ', 'Enter'].includes(event.key)) return;
     event.preventDefault();
@@ -14,8 +16,8 @@
 
 <main class="step">
   <div>
-    <a href="/programme#tab2" class="step__back-link"><h2>L'ÉTÉ DES BIFURCATIONS</h2></a>
-    <h1 class="step__title">FAIRE UNE GRANDE LOI POUR LE POUVOIR D'ACHAT</h1>
+    <a href="/programme#tab2" class="step__back-link"><h2>L'été des bifurcations</h2></a>
+    <h1 class="step__title">Faire une grande loi pour le pouvoir d'achat</h1>
   </div>
 
   <div class="step__details">
@@ -26,11 +28,11 @@
       <button><i class="fa-solid fa-link"></i></button>
     </div>
 
-    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button">
+    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button" onclick="showModal()" onkeypress="showModalKeyboard()">
       <p>Indexer les salaires sur l'inflation et porter l'Allocation aux adultes handicapés (AAH) au niveau du SMIC</p>
       <span class="step__text-background"></span>
     </div>
-    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button">
+    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button" onclick="showModal()" onkeypress="showModalKeyboard()">
       <p>Abolir la monarchie présidentielle dans la pratique des institutions :</p>
       <ul>
         <li>Instaurer la proportionnelle</li>
@@ -40,7 +42,7 @@
       </ul>
       <span class="step__text-background"></span>
     </div>
-    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button">
+    <div class="step__text" tabindex="0" on:click={showModal} on:keypress={showModalKeyboard} role="button" onclick="showModal()" onkeypress="showModalKeyboard()">
       <p>Abolir la taxe Macron de 10% sur les factures d'énergie, annuler la hausse programmée du prix du gaz au 1er juillet, plafonner les frais bancaires, faire la gratuité des premiers KwH, abolir les coupures d'électricité, de chaleur et de gaz (hors trêve hivernale), annuler les réformes Macron sur le revenu de solidarité active (RSA)</p>
       <span class="step__text-background"></span>
     </div>
@@ -58,8 +60,10 @@
   </div>
 </main>
 
+<!-- ici j'importe un bloc de code -->
 <StepDialog />
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .step {
     display: flex;

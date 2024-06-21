@@ -1,4 +1,5 @@
 <script>
+  // ignore ce script
   import logo from '$lib/images/frontpop_white_logo.png';
 </script>
 
@@ -25,6 +26,7 @@
   </nav>
 </header>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .header {
     background-color: var(--c-red);

@@ -1,4 +1,5 @@
 <script>
+  // ignore ce script
   import logo from '$lib/images/frontpop_logo.png';
 </script>
 
@@ -6,12 +7,13 @@
   <h2 class="hero__subtitle">Élections législatives 2024</h2>
   <img src="{logo}" alt="logo du nouveau front populaire" class="hero__logo">
 
-  <h1 class="hero__title">UN PROGRAMME DE RUPTURE</h1>
+  <h1 class="hero__title">Un programme de rupture</h1>
   <p class="hero__text">Le Nouveau Front Populaire rassemble des femmes et des hommes issus d'organisations politiques, syndicales, associatives et citoyennes qui s'unissent pour construire un programme de rupture avec la politique d'Emmanuel Macron, répondant aux urgences sociales, écologiques, démocratiques et pour la paix.</p>
 
-  <a href="/programme" class="hero__button-link">DÉCOUVRIR LE PROGRAMME <span class="arrow"></span></a>
+  <a href="/programme" class="hero__button-link">Découvrir le programme<span class="arrow"></span></a>
 </section>
 
+<!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .hero {
     max-width: var(--bp-desktop);
@@ -32,6 +34,10 @@
     font-size: var(--fs-title--larger);
   }
 
+  .hero__subtitle {
+    text-transform: initial;
+  }
+
   .hero__button-link {
     display: flex;
     align-items: center;
@@ -43,6 +49,7 @@
     font-weight: var(--fw--bold);
     text-decoration: none;
     border: transparent;
+    text-transform: uppercase;
 
     transition: gap 0.3s;
     &:hover,
