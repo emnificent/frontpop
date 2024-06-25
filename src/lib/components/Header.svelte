@@ -7,20 +7,22 @@
   <nav class="header__nav">
     <a href="/"><img src="{logo}" alt="logo du nouveau front populaire" class="header__nav-home"></a>
 
+    <a href="/programme" class="header__nav-main">Le programme</a>
+
     <div class="header__nav--group">
       <menu class="header__links">
-        <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-        <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-        <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-        <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-        <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i></a></li>
-        <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+        <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i><span class="header__links-background"></span></a></li>
+        <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i><span class="header__links-background"></span></a></li>
       </menu>
   
       <div class="header__nav--search">
         <input type="search" name="" id="" placeholder="Économie, justice, écologie...">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button aria-label="lancer la recherche"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </div>
   </nav>
@@ -45,6 +47,20 @@
     padding-block: 1.5rem;
   }
 
+  .header__nav-main {
+    font-weight: var(--fw--bolder);
+    color: var(--c-background);
+    text-decoration: none;
+    padding-block: 0.25rem;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+
+    &:hover,
+    &:focus-visible {
+      border-bottom: 1px solid var(--c-background);
+    }
+  }
+
   .header__nav--group {
     display: flex;
     gap: 1.5rem;
@@ -58,7 +74,7 @@
     border-radius: 0.5rem;
     overflow: hidden;
     padding: 0.5rem 1.5rem;
-    border: 2px solid var(--c-text);
+    border: 1px solid var(--c-text);
 
     & input {
       background-color: transparent;
@@ -87,28 +103,38 @@
     gap: 1.5rem;
     
     & li {
-      background-color: var(--c-background);
+      position: relative;
+      overflow: hidden;
       border-radius: 50%;
       width: 2rem;
       aspect-ratio: 1/1;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: background-color 0.3s;
+      background-color: transparent;
       
       & a {
         color: var(--c-text);
-        transition: color 0.3s;
-      }
+        z-index: 0;
 
-      &:hover,
-      &:focus-within {
-        background-color: var(--c-text);
-
-        & a {
-          color: var(--c-background);
+        &:hover,
+        &:focus-visible {
+          & .header__links-background {
+            opacity: 0.8;
+          }
         }
       }
     }
+  }
+  
+  .header__links-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--c-background);
+    z-index: -1;
+    transition: opacity 0.3s;
   }
 </style>

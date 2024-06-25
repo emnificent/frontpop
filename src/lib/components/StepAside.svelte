@@ -32,7 +32,7 @@
 <!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .step-aside-menu {
-    border: 2px solid var(--c-green);
+    border: 1px solid var(--c-green);
     border-radius: 2rem;
     padding: 3rem;
     height: fit-content;
@@ -67,8 +67,8 @@
 
       &:hover,
       &:focus-visible {
-        & h3 {
-          padding-inline: 7.5rem 1rem;
+        & .arrow {
+          opacity: 1;
         }
       }
     }
@@ -82,8 +82,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding-inline: 6.5rem 2rem;
-      transition: padding 0.3s;
+      padding-inline: 6.5rem 1.5rem;
 
       counter-increment: steps;
       &::before {
@@ -97,6 +96,11 @@
         justify-content: center;
         align-items: center;
         color: var(--c-background);
+      }
+
+      & .arrow {
+        opacity: 0;
+        transition: opacity 0.3s;
       }
     }
 
@@ -141,7 +145,7 @@
       &:nth-child(4n+1) {
         & h3 {
           color: var(--c-red);
-          box-shadow: inset var(--c-red) 0 -2px;
+          box-shadow: inset var(--c-red) 0 -1px;
         }
 
         & h3::before,
@@ -155,7 +159,7 @@
       &:nth-child(4n+2) {
         & h3 {
           color: var(--c-green);
-          box-shadow: inset var(--c-green) 0 -2px;
+          box-shadow: inset var(--c-green) 0 -1px;
         }
 
         & h3::before,
@@ -169,7 +173,7 @@
       &:nth-child(4n+3) {
         & h3 {
           color: var(--c-blue);
-          box-shadow: inset var(--c-blue) 0 -2px;
+          box-shadow: inset var(--c-blue) 0 -1px;
         }
 
         & h3::before,
@@ -183,7 +187,7 @@
       &:nth-child(4n+4) {
         & h3 {
           color: var(--c-purple);
-          box-shadow: inset var(--c-purple) 0 -2px;
+          box-shadow: inset var(--c-purple) 0 -1px;
         }
 
         & h3::before,

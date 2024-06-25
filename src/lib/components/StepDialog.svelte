@@ -8,12 +8,18 @@
                             && event.clientX <= dialogArea.left + dialogArea.width;
     if (!isClickInDialog) dialog.close();
   }
+
+  function copyUrl(event) {
+    event.preventDefault();
+    navigator.clipboard.writeText(window.location.href);
+  }
 </script>
 
-<!-- ignore les deux commentaires ci-dessous -->
+<!-- ignore les commentaires ci-dessous -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<dialog class="step-dialog" id="step-modal" on:click={closeModalOnBackdropClick} onclick="closeModalOnBackdropClick()">
+<!-- svelte-ignore a11y-autofocus -->
+<dialog class="step-dialog" id="step-modal" autofocus on:click={closeModalOnBackdropClick} onclick="closeModalOnBackdropClick()">
   <form class="step-dialog__content" method="dialog">
     <div>
       <h2 class="step-dialog__subtitle">L'été des bifurcations</h2>
@@ -27,14 +33,14 @@
     
       <div class="step-dialog__share">
         <p>Partager :</p>
-        <a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <button><i class="fa-solid fa-link"></i></button>
+        <a href="https://x.com/intent/tweet?text=https://host.fr" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="step-dialog__share-background"></span></a>
+        <a href="https://facebook.com/sharer/sharer.php?u=https://host.fr/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span class="step-dialog__share-background"></span></a>
+        <button aria-label="copier le lien de la mesure" on:click={copyUrl} onclick="copyUrl()"><i class="fa-solid fa-link"></i><span class="step-dialog__share-background"></span></button>
       </div>
     </div>
   
   
-    <button class="step-dialog__close-button"></button>
+    <button class="step-dialog__close-button" aria-label="fermer la popup"></button>
   </form>
   <span class="step-dialog__background"></span>
 </dialog>
@@ -90,7 +96,7 @@
     padding-inline: 2.5rem 2rem;
     position: relative;
     background-color: var(--c-background);
-    box-shadow: inset 0 -2px var(--c-red),
+    box-shadow: inset 0 -1px var(--c-red),
                 inset 8px 0 var(--c-red);
 
     & ul {
@@ -120,17 +126,39 @@
 
     & a,
     & button {
+      position: relative;
+      z-index: 0;
       text-decoration: none;
       width: 2rem;
-      aspect-ratio: 1/1;
+      height: 2rem;
       border-radius: 50%;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-      border: 4px solid var(--c-background);
-      background-color: var(--c-background);
-      color: var(--c-text);
+      border: none;
+      padding: 4px;
+      background-color: transparent;
+      color: var(--c-background);
+
+      &:hover,
+      &:focus-visible {
+        & .step-dialog__share-background {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    & .step-dialog__share-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: var(--c-text);
+      transition: opacity 0.3s;
     }
   }
 
@@ -145,6 +173,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: transparent solid 2px;
+    transition: outline 0.3s;
+
+    &:hover,
+    &:focus-visible {
+      outline: var(--c-text) solid 2px;
+    }
 
     &::before,
     &::after {

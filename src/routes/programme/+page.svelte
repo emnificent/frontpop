@@ -2,10 +2,13 @@
   // ignore ce script
   import Roadmap from '$lib/components/Roadmap.svelte';
   import Search from '$lib/components/Search.svelte';
+  import hero from '$lib/images/080_hl_stenani_2423101.jpg'
 </script>
 
 <main>
-  <img src="" alt="" class="roadmap-page__image">
+  <div class="roadmap-page__image">
+    <img src="{hero}" alt="les négociateurs des partis de gauche réunis pour former le Nouveau Front Populaire">
+  </div>
 
   <article class="roadmap-page__introduction">
     <h1 class="roadmap-page__introduction-title">Un cap clair pour le nouveau front populaire</h1>
@@ -41,12 +44,13 @@
 
   .roadmap-page__image {
     height: 34rem;
-  }
-
-  /* TEMP */
-  img {
-    height: 100%;
-    width: 100%;
-    background: orange;
+    overflow: hidden;
+    
+    & img {
+      width: 100%;
+      height: 230%;
+      object-fit: cover;
+      object-position: bottom;
+    }
   }
 </style>

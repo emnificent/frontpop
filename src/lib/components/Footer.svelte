@@ -8,13 +8,13 @@
     <a href="/"><img src="{logo}" alt="logo du nouveau front populaire" class="footer__nav-home"></a>
 
     <menu class="footer__links">
-      <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-      <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-      <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-      <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i></a></li>
-      <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+      <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i><span class="footer__links-background"></span></a></li>
+      <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i><span class="footer__links-background"></span></a></li>
     </menu>
     
     <a href="/legal" class="footer__legal">Mentions légales</a>
@@ -25,6 +25,7 @@
 <style lang="scss">
   .footer {
     background-color: var(--c-text);
+    margin-bottom: 2rem;
     /* margin-top + global to put footer where it belongs */
     margin-top: auto;
   }
@@ -68,34 +69,44 @@
     gap: 1.5rem;
     
     & li {
-      background-color: var(--c-background);
+      position: relative;
+      overflow: hidden;
+      background-color: transparent;
       border-radius: 50%;
       width: 2rem;
       aspect-ratio: 1/1;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: background-color 0.3s;
       
       & a {
         color: var(--c-text);
-        transition: color 0.3s;
-      }
+        z-index: 0;
 
-      &:hover,
-      &:focus-within {
-        background-color: var(--c-text);
-
-        & a {
-          color: var(--c-background);
+        &:hover,
+        &:focus-visible {
+          & .footer__links-background {
+            opacity: 0.8;
+          }
         }
       }
     }
   }
 
+  .footer__links-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--c-background);
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+
   .footer__legal {
     color: var(--c-background);
-    text-decoration: underline solid transparent 2px;
+    text-decoration: underline solid transparent 1px;
     transition: text-decoration-color 0.3s;
 
     &:hover,

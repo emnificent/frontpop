@@ -1,39 +1,23 @@
-<div class="colorful-separator"></div>
-
 <section class="search">
   <div class="search__container">
     <h2 class="search__title">Je veux connaître le programme du front populaire sur...</h2>
   
     <div class="search__shortcuts">
-      <button>Pouvoir d'achat</button>
-      <button>Planification écologique</button>
-      <button>Retraite</button>
-      <button>L'urgence de la paix</button>
+      <a href="/search?q=pouvoir d'achat">Pouvoir d'achat<span class="search__shortcuts-background"></span></a>
+      <a href="/search?q=planification écologique">Planification écologique<span class="search__shortcuts-background"></span></a>
+      <a href="/search?q=retraite">Retraite<span class="search__shortcuts-background"></span></a>
+      <a href="/search?q=l'urgence de la paix">L'urgence de la paix<span class="search__shortcuts-background"></span></a>
     </div>
   
     <div class="search__input">
       <input type="search" name="" id="" placeholder="Cherchez par mots clés: économie, justice, écologie...">
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button aria-label="lancer la recherche"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
   </div>
 </section>
 
 <!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
-  .colorful-separator {
-    height: 2rem;
-    background: linear-gradient(110deg, var(--c-green) 0% 10%,
-                                        var(--c-red) 10% 20%,
-                                        var(--c-yellow) 20% 30%,
-                                        var(--c-purple) 30% 40%,
-                                        var(--c-pink) 40% 50%,
-                                        var(--c-green) 50% 60%,
-                                        var(--c-red) 60% 70%,
-                                        var(--c-yellow) 70% 80%,
-                                        var(--c-purple) 80% 90%,
-                                        var(--c-pink) 90% 100%);
-  }
-
   .search {
     background-color: var(--c-green);
     padding-block: 5rem;
@@ -58,22 +42,37 @@
     display: flex;
     justify-content: space-between;
 
-    & button {
-      background-color: var(--c-text);
+    & a {
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+      z-index: 0;
       color: var(--c-background);
+      background-color: transparent;
       padding: 0.5rem 1.5rem;
       border: transparent;
       width: fit-content;
       font-size: var(--fs-text--small);
-      transition: background-color 0.3s, color 0.3s;
       &::first-letter {
         text-transform: capitalize;
+      }
+      
+      & .search__shortcuts-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--c-text);
+        z-index: -1;
+        transition: opacity 0.3s;
       }
 
       &:hover,
       &:focus-visible {
-        background-color: var(--c-background);
-        color: var(--c-text);
+        & .search__shortcuts-background {
+          opacity: 0.8;
+        }
       }
     }
   }
@@ -85,7 +84,7 @@
     border-radius: 1rem;
     overflow: hidden;
     padding: 1rem 2rem;
-    border: 2px solid var(--c-text);
+    border: 1px solid var(--c-text);
 
     & input {
       background-color: transparent;
@@ -98,6 +97,9 @@
     & button {
       width: 2rem;
       height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: transparent;
       background-color: transparent;
       font-size: var(--fs-text--large);
