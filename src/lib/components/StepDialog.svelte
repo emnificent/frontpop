@@ -22,14 +22,12 @@
 <dialog class="step-dialog" id="step-modal" autofocus on:click={closeModalOnBackdropClick} onclick="closeModalOnBackdropClick()">
   <form class="step-dialog__content" method="dialog">
     <div>
-      <h2 class="step-dialog__subtitle">L'été des bifurcations</h2>
-      <h1 class="step-dialog__title">Faire une grande loi pour le pouvoir d'achat</h1>
+      <h2 class="step-dialog__subtitle" id="step-modal-subtitle"> </h2>
+      <h1 class="step-dialog__title" id="step-modal-title"> </h1>
     </div>
 
     <div>
-      <div class="step-dialog__text">
-        <p>Abolir la taxe Macron de 10% sur les factures d'énergie, annuler la hausse programmée du prix du gaz au 1er juillet, plafonner les frais bancaires, faire la gratuité des premiers KwH, abolir les coupures d'électricité, de chaleur et de gaz (hors trêve hivernale), annuler les réformes Macron sur le revenu de solidarité active (RSA)</p>
-      </div>
+      <div class="step-dialog__text" id="step-modal-text"></div>
     
       <div class="step-dialog__share">
         <p>Partager :</p>
@@ -88,7 +86,7 @@
 
   .step-dialog__subtitle {
     font-size: var(--fs-text);
-    color: var(--c-green);
+    color: var(--c-subtitle);
   }
 
   .step-dialog__text {
@@ -196,6 +194,25 @@
 
     &::after {
       rotate: -45deg;
+    }
+  }
+
+  .step-dialog {
+    &::backdrop {
+      background-color: var(--c-style);
+    }
+    & .step-dialog__background {
+      background-color: var(--c-style);
+    }
+    & .step-dialog__title {
+      color: var(--c-style);
+    }
+    & .step-dialog__text {
+      box-shadow: inset 0 -1px var(--c-style),
+                  inset 8px 0 var(--c-style);
+      & ul > li::before {
+        color: var(--c-style);
+      }
     }
   }
 </style>
