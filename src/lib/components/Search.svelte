@@ -20,7 +20,10 @@
 <style lang="scss">
   .search {
     background-color: var(--c-green);
-    padding-block: 5rem;
+    padding-block: 3.5rem;
+    @media screen and (width >= 768px) {
+      padding-block: 5rem;
+    }
   }
 
   .search__container {
@@ -29,18 +32,28 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 816px) {
+      padding: 0;
+    }
   }
 
   .search__title {
     font-size: var(--fs-title--large);
     text-align: center;
-    line-height: 1.1;
     color: var(--c-background);
   }
 
   .search__shortcuts {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    
+    @media screen and (width >= 768px) {
+      justify-content: space-between;
+    }
 
     & a {
       position: relative;
@@ -83,9 +96,13 @@
     background-color: var(--c-background);
     border-radius: 1rem;
     overflow: hidden;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border: 1px solid var(--c-text);
-
+    
+    @media screen and (width >= 768px) {
+      padding: 1rem 2rem;
+    }
+    
     & input {
       background-color: transparent;
       color: var(--c-text);

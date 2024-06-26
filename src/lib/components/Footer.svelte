@@ -7,17 +7,19 @@
   <nav class="footer__nav">
     <a href="/"><img src="{logo}" alt="logo du nouveau front populaire" class="footer__nav-home"></a>
 
-    <menu class="footer__links">
-      <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i><span class="footer__links-background"></span></a></li>
-      <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i><span class="footer__links-background"></span></a></li>
-    </menu>
-    
-    <a href="/legal" class="footer__legal">Mentions légales</a>
+    <div class="footer--mobile-group">
+      <menu class="footer__links">
+        <li><a href="https://x.com/DiscordGauche" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://facebook.com/discordgauche" target="_blank"><i class="fa-brands fa-facebook-f"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://instagram.com/discord.barricade/" target="_blank"><i class="fa-brands fa-instagram"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://youtube.com/@la_barricade/videos" target="_blank"><i class="fa-brands fa-youtube"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://tiktok.com/@distok_populaire" target="_blank"><i class="fa-brands fa-tiktok"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://twitch.tv/la_barricade" target="_blank"><i class="fa-brands fa-twitch"></i><span class="footer__links-background"></span></a></li>
+        <li><a href="https://discord.gg/barricade" target="_blank"><i class="fa-brands fa-discord"></i><span class="footer__links-background"></span></a></li>
+      </menu>
+      
+      <a href="/legal" class="footer__legal">Mentions légales</a>
+    </div>
   </nav>
 </footer>
 
@@ -25,7 +27,18 @@
 <style lang="scss">
   .footer {
     background-color: var(--c-text);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+
+    @media screen and (width >= 1280px) {
+      margin-bottom: 2rem;
+      padding-inline: 2.5rem;
+    }
+    
+    @media screen and (width >= 1488px) {
+      padding: 0;
+    }
+
     /* margin-top + global to put footer where it belongs */
     margin-top: auto;
   }
@@ -38,15 +51,20 @@
   }
 
   .footer__nav {
+    max-width: var(--bp-desktop--large);
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--bp-desktop--large);
-    margin: auto;
-    display: grid;
-    grid-template: auto / repeat(3, 1fr);
+    gap: 0.5rem;
+    
+    @media screen and (width >= 1280px) {
+      display: grid;
+      grid-template: auto / repeat(3, 1fr);
+      gap: 0;
+    }
 
-    & > * {
+    & * {
       margin-inline: auto;
 
       &:first-child {
@@ -60,13 +78,38 @@
   }
 
   .footer__nav-home {
-    height: var(--fs-title--large);
+    @media screen and (width < 414px) {
+      display: none;
+    }
+
+    height: 2.5rem;
+    @media screen and (width >= 768px) {
+      height: var(--fs-title--large);
+    }
+
     padding-block: 1.5rem;
+  }
+
+  .footer--mobile-group {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.5rem;
+
+    @media screen and (width >= 1280px) {
+      display: contents;
+    }
   }
 
   .footer__links {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    @media screen and (width >= 768px) {
+      gap: 0.75rem;
+    }
+    @media screen and (width >= 1280px) {
+      gap: 1.5rem;
+    }
     
     & li {
       position: relative;

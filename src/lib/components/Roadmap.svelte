@@ -56,7 +56,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -65,7 +65,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -74,7 +74,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -83,7 +83,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -92,7 +92,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -101,7 +101,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -118,7 +118,7 @@
           <a href="/step">
             <div>
               <h3>Faire une grande loi pour le pouvoir d'achat</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -127,7 +127,7 @@
           <a href="/step">
             <div>
               <h3>Faire une grande loi pour la santé</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -136,7 +136,7 @@
           <a href="/step">
             <div>
               <h3>Faire une grande loi éducation</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -145,7 +145,7 @@
           <a href="/step">
             <div>
               <h3>Entamer la planification écologique</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -154,7 +154,7 @@
           <a href="/step">
             <div>
               <h3>Lutter contre toutes les formes de racismes, contre l'antisémitisme et l'islamophobie</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -163,7 +163,7 @@
           <a href="/step">
             <div>
               <h3>Abolir les privilèges des milliardaires</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -172,7 +172,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -181,7 +181,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -190,7 +190,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -207,7 +207,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -216,7 +216,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -225,7 +225,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -234,7 +234,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -243,7 +243,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -252,7 +252,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -261,7 +261,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -270,7 +270,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -279,7 +279,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -288,7 +288,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -297,7 +297,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -306,7 +306,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -315,7 +315,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -324,7 +324,7 @@
           <a href="/step">
             <div>
               <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>En savoir plus<span class="arrow"></span></p>
+              <p><span class="roadmap__steps-arrow-text">En savoir plus</span><span class="arrow"></span></p>
               <span class="roadmap__steps-background"></span>
             </div>
           </a>
@@ -343,6 +343,10 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    @media screen and (width >= 1280px) {
+      padding-inline: 2.5rem;
+    }
   }
 
   .roadmap__nav {
@@ -359,9 +363,28 @@
   }
 
   .roadmap__tab {
-    padding: 1.5rem;
     position: relative;
     transition: background-color 0.3s;
+    
+    padding: 0.5rem;
+    font-size: var(--fs-text--small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (width >= 768px) {
+      padding: 1.5rem;
+      font-size: var(--fs-text);
+    }
+
+    @media screen and (width < 1280px) {
+      &:first-child {
+        border-right: 1px solid var(--c-text);
+      }
+      &:last-child {
+        border-left: 1px solid var(--c-text);
+      }
+    }
 
     & a {
       text-decoration: none;
@@ -373,6 +396,7 @@
     & p {
       text-align: center;
       font-weight: var(--fw--bolder);
+      line-height: 1.1;
     }
 
     & span {
@@ -384,6 +408,15 @@
       z-index: -1;
       opacity: 0;
       transition: opacity 0.3s;
+    }
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      @media screen and (width >= 768px) {
+        gap: 0.5rem;
+      }
     }
 
     &.tab1, &.tab2, &.tab3 {
@@ -441,14 +474,23 @@
 
   .roadmap__tab-title {
     font-family: 'Barlow Condensed', 'sans-serif';
-    font-size: var(--fs-title);
     text-transform: uppercase;
+    font-size: var(--fs-text);
+    
+    @media screen and (width >= 768px) {
+      font-size: var(--fs-title);
+    }
   }
     
   .roadmap__content {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1280px) {
+      padding: 0;
+    }
 
     &.hide {
       display: none;
@@ -491,7 +533,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 5rem;
+      gap: 1rem;
+      
+      @media screen and (width >= 768px) {
+        gap: 5rem;
+      }
     }
 
     & h3 {
@@ -515,43 +561,68 @@
       }
     }
 
+    @media screen and (width < 768px) {
+      & h3 {
+        font-size: var(--fs-text--large);
+        padding-left: 4.5rem;
+
+        &::before {
+          width: 3.5rem;
+        }
+      }
+    }
+
     & p {
       display: flex;
       align-items: center;
       gap: 0.35rem;
-      margin-right: 2rem;
+      margin-right: 1rem;
       font-size: var(--fs-text--small);
       white-space: nowrap;
       flex-wrap: nowrap;
       padding-block: 2px;
       border-bottom: 1px solid transparent;
       transition: border 0.3s;
+      
+      @media screen and (width >= 768px) {
+        margin-right: 2rem;
+
+        & .arrow {
+          scale: 0.66;
+        }
+      }
+    }
+
+    & .roadmap__steps-arrow-text {
+      @media screen and (width < 768px) {
+        display: none;
+      }
     }
 
     & .arrow {
       flex-shrink: 0;
       display: inline-block;
-      width: 1rem;
-      height: 1px;
+      width: 1.5rem;
+      height: 2px;
       position: relative;
 
       &::before,
       &::after {
         content: '';
         position: absolute;
-        width: 0.5rem;
-        height: 1px;
-        right: -2.5px;
+        width: 0.75rem;
+        height: 2px;
+        right: -3.25px;
       }
       
       &::before {
         rotate: 45deg;
-        top: -2.5px;
+        top: -3.75px;
       }
 
       &::after {
         rotate: -45deg;
-        bottom: -2.5px;
+        bottom: -3.75px;
       }
     }
 
@@ -566,148 +637,47 @@
     }
 
     & li {
+      & div {
+        color: var(--c-highlight);
+        box-shadow: inset var(--c-highlight) 0 -1px;
+      }
+
+      & a {
+        &:hover,
+        &:focus-visible {
+          & p {
+            @media screen and (width >= 768px) {
+              border-bottom: 1px solid var(--c-highlight);
+            }
+          }
+        }
+      }
+
+      & h3::before,
+      & .arrow,
+      & .arrow::before,
+      & .arrow::after,
+      & .roadmap__steps-background {
+        background-color: var(--c-highlight);
+      }
+
       &:nth-child(6n+1) {
-        & div {
-          color: var(--c-red);
-          box-shadow: inset var(--c-red) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-red);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-red);
-        }
+        --c-highlight: var(--c-red);
       }
-
       &:nth-child(6n+2) {
-        & div {
-          color: var(--c-green);
-          box-shadow: inset var(--c-green) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-green);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-green);
-        }
+        --c-highlight: var(--c-green);
       }
-
       &:nth-child(6n+3) {
-        & div {
-          color: var(--c-blue);
-          box-shadow: inset var(--c-blue) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-blue);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-blue);
-        }
+        --c-highlight: var(--c-blue);
       }
-
       &:nth-child(6n+4) {
-        & div {
-          color: var(--c-purple);
-          box-shadow: inset var(--c-purple) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-purple);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-purple);
-        }
+        --c-highlight: var(--c-purple);
       }
-
       &:nth-child(6n+5) {
-        & div {
-          color: var(--c-pink);
-          box-shadow: inset var(--c-pink) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-pink);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-pink);
-        }
+        --c-highlight: var(--c-pink);
       }
-
       &:nth-child(6n+6) {
-        & div {
-          color: var(--c-text);
-          box-shadow: inset var(--c-text) 0 -1px;
-        }
-
-        & a {
-          &:hover,
-          &:focus-visible {
-            & p {
-            border-bottom: 1px solid var(--c-text);
-            }
-          }
-        }
-
-        & h3::before,
-        & .arrow,
-        & .arrow::before,
-        & .arrow::after,
-        & .roadmap__steps-background {
-          background-color: var(--c-text);
-        }
+        --c-highlight: var(--c-text);
       }
     }
   }

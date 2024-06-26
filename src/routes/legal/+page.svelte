@@ -17,10 +17,19 @@
   .legal {
     max-width: var(--bp-desktop--large);
     margin: auto;
-    margin-block: 5rem;
+    margin-block: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+
+    @media screen and (width >= 768px) {
+      margin-block: 5rem;
+    }
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
 
     & h1 {
       font-size: var(--fs-title--large);

@@ -45,11 +45,20 @@
     width: 100%;
     max-width: var(--bp-desktop--large);
     margin: auto;
-    margin-block: 5rem;
+    margin-block: 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
+
+    @media screen and (width >= 768px) {
+      margin-block: 5rem;
+    }
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
   }
 
   .search-page__header {
@@ -69,9 +78,13 @@
     background-color: var(--c-background);
     border-radius: 1rem;
     overflow: hidden;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border: 1px solid var(--c-text);
-
+    
+    @media screen and (width >= 768px) {
+      padding: 1rem 2rem;
+    }
+    
     & input {
       background-color: transparent;
       color: var(--c-text);

@@ -33,18 +33,27 @@
 <style lang="scss">
   .step-aside-menu {
     border: 1px solid var(--c-green);
-    border-radius: 2rem;
-    padding: 3rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
     height: fit-content;
-    width: 21.25rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    position: sticky;
-    top: 3rem;
-
+    gap: 2.5rem;
+    
     & h2, h3 {
       text-transform: initial;
+    }
+    
+    @media screen and (width >= 768px) {
+      border-radius: 2rem;
+      padding: 3rem;
+      gap: 3rem;
+    }
+    
+    @media screen and (width >= 1280px) {
+      width: 21.25rem;
+      position: sticky;
+      top: 3rem;
     }
   }
 
@@ -56,7 +65,11 @@
   .step-aside-menu__links {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    @media screen and (width >= 768px) {
+      gap: 1.5rem;
+    }
+
     counter-set: steps 0;
     
     & a {
@@ -99,8 +112,22 @@
       }
 
       & .arrow {
-        opacity: 0;
-        transition: opacity 0.3s;
+        @media screen and (width >= 1280px) {
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+
+    @media screen and (width < 768px) {
+      & h3 {
+        font-size: var(--fs-text--large);
+        padding-left: 4.5rem;
+        word-break: break-word;
+
+        &::before {
+          width: 3.5rem;
+        }
       }
     }
 
@@ -117,17 +144,17 @@
         position: absolute;
         width: 0.75rem;
         height: 2px;
-        right: -3.5px;
+        right: -3.25px;
       }
       
       &::before {
         rotate: 45deg;
-        top: -3.5px;
+        top: -3.75px;
       }
 
       &::after {
         rotate: -45deg;
-        bottom: -3.5px;
+        bottom: -3.75px;
       }
     }
 

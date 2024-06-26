@@ -119,7 +119,6 @@
 
   .step__title {
     font-size: var(--fs-title--large);
-    line-height: 1.1;
   }
 
   .step__details {
@@ -283,11 +282,16 @@
       z-index: 0;
       display: inline-block;
       background-color: transparent;
-      padding: 0.5rem 1rem;
-      width: 5.75rem;
+      padding: 0.25rem 0.5rem;
+      width: 5.25rem;
       display: flex;
       justify-content: center;
       transition: color 0.3s, background-color 0.3s;
+      
+      @media screen and (width >= 1280px) {
+        padding: 0.5rem 1rem;
+        width: 5.75rem;
+      }
       
       & .step__navigation-text-background {
         position: absolute;
@@ -302,14 +306,31 @@
     }
 
     & .step__navigation-arrow {
-      display: inline-block;
       position: relative;
-      width: 2.75rem;
+      width: 1.75rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      & .arrow {
+        scale: 0.66;
+      }
+
+      @media screen and (width >= 768px) {
+        width: 2.25rem;
+      }
+      
+      @media screen and (width >= 1280px) {
+        width: 2.75rem;
+        & .arrow {
+          scale: 1;
+        }
+      }
     }
 
     & .arrow {
       display: inline-block;
-      position: absolute;
       right: 25%;
       width: 1.5rem;
       height: 2px;
@@ -321,18 +342,18 @@
         position: absolute;
         width: 0.75rem;
         height: 2px;
-        right: -3.5px;
+        right: -3.25px;
         background-color: var(--c-background);
       }
       
       &::before {
         rotate: 45deg;
-        top: -3.5px;
+        top: -3.75px;
       }
 
       &::after {
         rotate: -45deg;
-        bottom: -3.5px;
+        bottom: -3.75px;
       }
     }
   }

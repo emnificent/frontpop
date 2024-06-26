@@ -53,10 +53,18 @@
     left: 50%;
     translate: -50% -50%;
     padding: 2rem;
-
+    
     &::backdrop {
       background-color: var(--c-red);
       opacity: 0.75;
+    }
+
+    min-width: 65vw;
+    @media screen and (width >= 768px) {
+      min-width: 80vw;
+    }
+    @media screen and (width >= 1280px) {
+      min-width: auto;
     }
   }
 
@@ -164,8 +172,6 @@
     position: absolute;
     width: 2rem;
     height: 2rem;
-    top: 0;
-    right: 0;
     border: none;
     background-color: transparent;
     display: flex;
@@ -173,6 +179,16 @@
     justify-content: center;
     outline: transparent solid 2px;
     transition: outline 0.3s;
+
+    scale: 0.5;
+    top: -0.5rem;
+    right: -0.5rem;
+
+    @media screen and (width >= 768px) {
+      scale: 1;
+      top: 0;
+      right: 0;
+    }
 
     &:hover,
     &:focus-visible {

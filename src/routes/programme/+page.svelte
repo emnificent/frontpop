@@ -26,10 +26,19 @@
   .roadmap-page__introduction {
     max-width: var(--bp-desktop--large);
     margin: auto;
-    margin-block: 5rem;
+    margin-block: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    
+    @media screen and (width >= 768px) {
+      margin-block: 5rem;
+    }
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
   }
 
   .roadmap-page__introduction-title {
@@ -37,20 +46,34 @@
   }
 
   .roadmap-page__introduction-text {
-    column-count: 2;
-    column-gap: 2.5rem;
     text-align: justify;
+    
+    @media screen and (width >= 1280px) {
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
   }
 
   .roadmap-page__image {
-    height: 34rem;
+    height: 14.5rem;
     overflow: hidden;
     
     & img {
       width: 100%;
-      height: 230%;
+      height: 100%;
       object-fit: cover;
       object-position: bottom;
+
+      @media screen and (width >= 768px) {
+        height: 200%;
+      }
+      @media screen and (width >= 2560px) {
+        height: 250%;
+      }
+    }
+    
+    @media screen and (width >= 1280px) {
+      height: 34rem;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 <section class="discord">
   <h2 class="discord__title">Le front populaire s'organise sur Discord</h2>
 
-  <p>Le site a été entièrement conçu par des citoyens ayant rejoint le Discord du Front Populaire.<br/>Il reprend l'intégralité du programme officiel issu du contrat de législature du Nouveau Front Populaire.<br/>Rejoignez la mobilisation citoyenne sur Discord !</p>
+  <p>Le site a été entièrement conçu par des citoyens ayant rejoint le Discord du Front Populaire. <span class="discord--desktop-only"><br/></span> Il reprend l'intégralité du programme officiel issu du contrat de législature du Nouveau Front Populaire.<br/>Rejoignez la mobilisation citoyenne sur Discord !</p>
 
   <a href="https://discord.gg/barricade" class="discord__button-link"><i class="fa-brands fa-discord"></i>Rejoindre le Discord<span class="discord__button-link-background"></span></a>
 </section>
@@ -11,11 +11,26 @@
   .discord {
     max-width: var(--bp-desktop);
     margin: auto;
-    margin-block: 5rem;
+    margin-block: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
+    
+    @media screen and (width >= 768px) {
+      margin-block: 5rem;
+    }
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
+  }
+
+  .discord--desktop-only {
+    @media screen and (width < 1280px) {
+      display: none;
+    }
   }
 
   .discord__title {

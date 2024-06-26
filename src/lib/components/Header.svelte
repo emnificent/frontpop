@@ -25,6 +25,8 @@
         <button aria-label="lancer la recherche"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </div>
+
+    <a href="/search" aria-label="rechercher" class="header__nav--mobile-search"><i class="fa-solid fa-magnifying-glass"></i></a>
   </nav>
 </header>
 
@@ -40,10 +42,19 @@
     align-items: center;
     max-width: var(--bp-desktop--large);
     margin: auto;
+
+    padding-inline: 1.5rem;
+    @media screen and (width >= 1488px) {
+      padding: 0;
+    }
   }
 
   .header__nav-home {
-    height: var(--fs-title--large);
+    height: 2.5rem;
+    @media screen and (width >= 768px) {
+      height: var(--fs-title--large);
+    }
+
     padding-block: 1.5rem;
   }
 
@@ -62,9 +73,13 @@
   }
 
   .header__nav--group {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+    display: none;
+
+    @media screen and (width >= 1280px) {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
   }
 
   .header__nav--search {
@@ -96,6 +111,28 @@
         opacity: 1;
       }
     }
+  }
+
+  .header__nav--mobile-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (width >= 1280px) {
+      display: none;
+    }
+
+    width: 1.75rem;
+    height: 1.75rem;
+    @media screen and (width >= 768px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    background-color: var(--c-background);
+    text-decoration: none;
+    color: var(--c-text);
+    border: 1px solid var(--c-text);
+    border-radius: 0.5rem;
   }
 
   .header__links {

@@ -15,10 +15,25 @@
   .step__layout {
     max-width: var(--bp-desktop--large);
     margin: auto;
-    margin-block: 5rem;
-    display: grid;
-    grid-template: auto / 1.75fr 1fr;
-    gap: 5rem;
+    margin-block: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
     position: relative;
+
+    @media screen and (width >= 768px) {
+      margin-block: 5rem;
+    }
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
+    
+    @media screen and (width >= 1280px) {
+      display: grid;
+      grid-template: auto / 1.75fr 1fr;
+      gap: 5rem;
+    }
   }
 </style>

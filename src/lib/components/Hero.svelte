@@ -23,10 +23,17 @@
 <!-- ne copie pas le CSS depuis ici, c'est du SCSS, ça permet d'aller plus vite, mais il doit être compiler pour fonctionner correctement, tu trouveras le CSS compilé dans /styles/compiled.css -->
 <style lang="scss">
   .hero {
-    height: calc(100vh - 8.5rem);
+    height: calc(100vh - 10rem);
     display: flex;
     flex-direction: column;
     position: relative;
+    
+    @media screen and (width >= 768px) {
+      height: calc(100vh - 7.5rem);
+    }
+    @media screen and (width >= 1440px) {
+      height: calc(100vh - 8.5rem);
+    }
   }
 
   .hero__content {
@@ -37,11 +44,20 @@
     gap: 2.5rem;
     text-align: center;
     color: var(--c-background);
+
+    padding-inline: 2.5rem;
+    @media screen and (width >= 1520px) {
+      padding: 0;
+    }
   }
 
   .hero__logo {
-    height: 12rem;
     margin-inline: auto;
+    height: 6rem;
+    
+    @media screen and (width >= 1440px) {
+      height: 12rem;
+    }
   }
 
   .hero__title {
@@ -50,6 +66,17 @@
 
   .hero__subtitle {
     text-transform: initial;
+    display: none;
+
+    @media screen and (width >= 768px) {
+      display: initial;
+    }
+    @media screen and (width >= 1280px) {
+      display: none;
+    }
+    @media screen and (width >= 1440px) {
+      display: initial;
+    }
   }
 
   .hero__button-link {
@@ -85,17 +112,17 @@
         width: 0.75rem;
         height: 2px;
         background-color: var(--c-background);
-        right: -3.5px;
+        right: -3.25px;
       }
       
       &::before {
         rotate: 45deg;
-        top: -3.5px;
+        top: -3.75px;
       }
 
       &::after {
         rotate: -45deg;
-        bottom: -3.5px;
+        bottom: -3.75px;
       }
     } 
   }
