@@ -53,7 +53,7 @@
     @media screen and (width >= 1280px) {
       width: 21.25rem;
       position: sticky;
-      top: 3rem;
+      top: 1.5rem;
     }
   }
 

@@ -31,8 +31,11 @@
     padding: 1rem 1.5rem;
 
     @media screen and (width >= 1280px) {
-      margin-bottom: 2rem;
       padding-inline: 2.5rem;
+    }
+    
+    @media screen and (width >= 1440px) {
+      margin-bottom: 2rem;
     }
     
     @media screen and (width >= 1488px) {

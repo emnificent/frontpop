@@ -34,8 +34,8 @@
     gap: 2.5rem;
 
     padding-inline: 2.5rem;
-    @media screen and (width >= 816px) {
-      padding: 0;
+    @media screen and (width >= 1280px) {
+      padding-inline: 10.75rem;
     }
   }
 
